@@ -7,3 +7,11 @@
 clang-tidy tinybox.c -fix-errors -checks="readability-braces-around-statements"
 clang-format -i tinybox.c
 ```
+
+## install
+
+```bash
+make install
+# or
+make install INSTALL_DIR=install_dir
+```
