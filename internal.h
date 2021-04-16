@@ -13,8 +13,10 @@ struct Applet {
     int (*main)(int argc, char **argv);
 };
 
+extern void usage(const char *msg);
 extern int tinybox_main(int argc, char **argv);
 extern void name_and_error(const char *name);
 extern int cat_main(int argc, char **argv);
+extern int ls_main(int argc, char **argv);
 
 #endif

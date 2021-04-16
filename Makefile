@@ -2,7 +2,7 @@
 VERSION = 0.01
 BUILDTIME = $(shell date "+%Y%m%d-%H%M")
 
-APPLETS = cat
+APPLETS = cat ls
 OBJECTS = tinybox.o utility.o $(patsubst %, %.o, $(APPLETS))
 TARGET = tinybox
 INSTALL_DIR ?= _install
@@ -17,7 +17,7 @@ all: $(TARGET)
 install: $(TARGET) | $(INSTALL_DIR)
 	cp $< $(INSTALL_DIR)
 	$(foreach applet, $(APPLETS), \
-		ln -s tinybox "$(INSTALL_DIR)/$(applet)" \
+		ln -s tinybox "$(INSTALL_DIR)/$(applet)"; \
 		)
 
 $(INSTALL_DIR):

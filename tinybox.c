@@ -13,6 +13,9 @@ static const struct Applet applets[] = {
 #ifdef TB_CAT // bin
     {"cat", cat_main},
 #endif
+#ifdef TB_LS // bin
+    {"ls", ls_main},
+#endif
     {0},
 };
 
